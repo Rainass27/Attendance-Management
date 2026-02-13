@@ -12,7 +12,7 @@ $teacher_name = $_SESSION['teacher_name'] ?? 'Teacher';
 $host = 'localhost';
 $dbname = 'student_management_system';  
 $username = 'root';
-$password = 'Buburaina123$';
+$password = '';
 
 $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -163,3 +163,4 @@ if(isset($_POST['save_attendance'])) {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
