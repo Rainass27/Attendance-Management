@@ -5,7 +5,7 @@ if (!isset($_SESSION['studentid'])) {
 }
 
 $studentid = $_SESSION['studentid'];
-$pdo = new PDO("mysql:host=localhost;dbname=student_management_system;charset=utf8mb4", "root", "Buburaina123$");
+$pdo = new PDO("mysql:host=localhost;dbname=student_management_system;charset=utf8mb4", "root", "");
 
 // Student name
 $stmt = $pdo->prepare("SELECT CONCAT(first_name, ' ', COALESCE(middle_name,''), ' ', last_name) as fullname FROM student WHERE student_id = ?");
@@ -187,3 +187,4 @@ $attendance = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </body>
 </html>
+
