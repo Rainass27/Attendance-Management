@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $studentid = trim($_POST['studentid']);
     
     // ✅ CORRECT: Matches your SQL dump
-    $pdo = new PDO("mysql:host=localhost;dbname=student_management_system;charset=utf8mb4", "root", "Buburaina123$");
+    $pdo = new PDO("mysql:host=localhost;dbname=student_management_system;charset=utf8mb4", "root", "");
     
     $stmt = $pdo->prepare("
         SELECT s.student_id, CONCAT(s.first_name, ' ', COALESCE(s.middle_name,''), ' ', s.last_name) as name
@@ -72,3 +72,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </body>
 </html>
+
