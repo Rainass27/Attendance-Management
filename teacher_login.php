@@ -5,7 +5,7 @@ if(isset($_POST['biometric_login'])) {
     $teacher_id = $_POST['teacher_id'];
     
     // Check if teacher exists
-    $pdo = new PDO("mysql:host=localhost;dbname=student_management_system;charset=utf8mb4", "root", "Buburaina123$");
+    $pdo = new PDO("mysql:host=localhost;dbname=student_management_system;charset=utf8mb4", "root", "");
     $stmt = $pdo->prepare("SELECT employee_id, CONCAT(first_name, ' ', last_name) as name FROM employee WHERE employee_id = ?");
     $stmt->execute([$teacher_id]);
     $teacher = $stmt->fetch();
@@ -62,3 +62,4 @@ if(isset($_POST['biometric_login'])) {
     </div>
 </body>
 </html>
+
